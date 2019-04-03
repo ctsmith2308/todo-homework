@@ -1,5 +1,5 @@
 const initialState = {
-  active: [],
+  active: ['you'],
   completed: [],
   all: []
 }
@@ -7,7 +7,10 @@ const initialState = {
 const listReducer = (state = initialState, action) => {
   switch(action.type){
     case 'add_todo':
-      return {...state, active: [...state.active, action.payload]}
+      return {
+        ...state,
+        active:[ ...state.active, action.payload]
+      }
     default:
     return state
   }
