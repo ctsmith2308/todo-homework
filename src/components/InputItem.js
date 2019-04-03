@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { add_todo } from '../actions/listActions';
 
 const InputItem = ({ add_todo }) => {
   return (

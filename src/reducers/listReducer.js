@@ -1,5 +1,5 @@
 const initialState = {
-  active: ['you'],
+  active: [],
   completed: [],
   all: []
 }
