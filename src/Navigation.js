@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Todo from './Todo';
+import Todo from './components/Todo';
 
 const Navigation = () => (
   <BrowserRouter>
