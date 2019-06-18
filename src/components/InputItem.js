@@ -1,15 +1,14 @@
 import React from 'react';
 
-const InputItem = ({ add_todo }) => {
+// TODO: Add React PropTypes
+// TODO: Add drop down arrow and associated functionality
+
+const InputItem = ({ add_todo, handle_input, currentTodo }) => {
   return (
-    <div>
-      <form onSubmit={ e =>
-        { e.preventDefault();
-          add_todo(e.target[0].value);
-         }
-      }>
-        <input type="text"/>
-        <input type="submit" value="Submit" />
+    <div className='todo-input-container'>
+      <form
+        onSubmit={ e => { e.preventDefault(); add_todo(currentTodo) }}>
+        <input className='todo-input' type="text" placeholder='What needs to be done?' value={ currentTodo } onChange={ e => handle_input(e.target.value) } />
       </form>
     </div>
   )
