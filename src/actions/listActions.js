@@ -35,14 +35,17 @@ export const clear_completed = () => ({
   type: 'clear_completed'
 })
 
-export const setViewAll = () => {
+export const setViewAll = (history) => {
+  history.push('/#/all');
   return { type: 'view_all' }
 }
 
-export const setViewActive = () => {
+export const setViewActive = (history) => {
+  history.push('/#/active')
   return { type: 'view_active' }
 }
 
-export const setViewCompleted = () => {
+export const setViewCompleted = (history) => {
+  history.push('/#/completed')
   return { type: 'view_completed' }
 }
